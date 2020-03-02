@@ -9,7 +9,7 @@ public class Aburrida implements EstadoMascota{
   }
 
   public void juga(Mascota unaMascota){
-    //Pasar a contenta
+    unaMascota.cambiarEstado(new Contenta());
   }
 
   public boolean podesJugar(Mascota unaMascota){

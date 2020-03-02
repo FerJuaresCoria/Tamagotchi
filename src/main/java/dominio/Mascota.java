@@ -15,6 +15,7 @@ public class Mascota{
   }
 
   public boolean podesJugar(){
+
     return this.estado.podesJugar(this);
   }
 
@@ -30,7 +31,12 @@ public class Mascota{
   }
 
   public void cambiarEstado(EstadoMascota estado){
+
     this.estado = estado;
+  }
+
+  public void aumentarFelicidad(int aumento){
+    this.felicidad += aumento;
   }
 
 }

@@ -3,13 +3,15 @@ public class Contenta implements EstadoMascota{
   private int cantJuegos;
 
   public void come(Mascota unaMascota){
-    //incrementar nivel de felicidad en 1
+    unaMascota.aumentarFelicidad(1);
   }
 
   public void juga(Mascota unaMascota){
-    //incrementar nivel de felicidad en 2
+    unaMascota.aumentarFelicidad(2);
+    this.cantJuegos++;
     if (cantJuegos >= 5){
-      //Pasar a hambrienta
+      unaMascota.cambiarEstado(new Hambrienta());
+      this.cantJuegos = 0;
     }
   }
 
